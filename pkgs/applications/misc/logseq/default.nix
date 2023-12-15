@@ -18,7 +18,7 @@ in {
 
   src = fetchurl {
     url = "https://github.com/logseq/logseq/releases/download/${tag}/logseq-linux-x64-${version}.AppImage";
-    hash = "sha256-ipqMgcpxmR4KbPtjxjOocLeHyd2jZwgiBhjmEie6yso=";
+    hash = "sha256-jDIfOHGki4InGuLvsnxdd2/FMPbT3VyuHtPxA4r3s5c=";
     name = "${pname}-${version}.AppImage";
   };
 
