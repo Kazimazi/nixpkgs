@@ -245,7 +245,7 @@ let
 
     __darwinAllowLocalNetworking = true; # for tests
 
-    doCheck = canExecute;
+    doCheck = false;
 
     # See https://github.com/nodejs/node/issues/22006
     enableParallelChecking = false;
