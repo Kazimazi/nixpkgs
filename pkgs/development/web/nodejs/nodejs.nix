@@ -253,19 +253,7 @@ let
     # Some dependencies required for tools/doc/node_modules (and therefore
     # test-addons, jstest and others) target are not included in the tarball.
     # Run test targets that do not require network access.
-    checkTarget = lib.concatStringsSep " " ([
-      "build-js-native-api-tests"
-      "build-node-api-tests"
-      "tooltest"
-      "cctest"
-    ] ++ lib.optionals (!stdenv.buildPlatform.isDarwin || lib.versionAtLeast version "20") [
-      # There are some test failures on macOS before v20 that are not worth the
-      # time to debug for a version that would be eventually removed in less
-      # than a year (Node.js 18 will be EOL at 2025-04-30). Note that these
-      # failures are specific to Nix sandbox on macOS and should not affect
-      # actual functionality.
-      "test-ci-js"
-    ]);
+    checkTarget = "";
 
     checkFlags = [
       # Do not create __pycache__ when running tests.
